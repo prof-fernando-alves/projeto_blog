@@ -5,6 +5,8 @@
     --green: #15cdcb;
     --bg-dark: #212226;
     --light-grey: #e0dede;
+
+    --menu-height: 75px;
 }
 
 * {
@@ -61,6 +63,11 @@ header .container {
     padding: 0 100px;
 }
 
+/* Para não aparecer o logo quando for desktop */
+header .container img {
+    display: none;
+}
+
 header .container h1 {
     color: var(--green);
 }
@@ -85,11 +92,20 @@ nav img {
     height: 45px;
 }
 
+/* Melhora a resposividade retirando a margim do vav ul a, pois a margim
+atrapalha querando muito facil */
+nav ul {
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+}
+
+
 nav ul a {
     font-size: 24px;
     color: var(--green);
     text-decoration: none;
-    margin: 0 35px;
+    /* margin: 0 35px; */
 }
 
 section {
@@ -97,3 +113,48 @@ section {
     background: purple;
 }
 
+/* Responsividade */
+
+/* TRansicaod e tablet para desktop */
+@media (max-width: 1000px) {
+    header .container {
+        /*Quando diminuir a tela ele muda para ocupar toda a tela  */
+        width: 100%; 
+    }
+
+    nav ul a {
+        font-size: 18px;
+    }
+
+    nav {
+        padding: 0 30px;
+    }
+
+}
+
+/* tablet o que for tela abaixo de 767px */
+@media (max-width: 767px) { 
+   
+    header .container img {
+        display: inline;
+        margin-bottom: 70px;
+        height: 45px;
+    }
+
+    nav img {
+        display: none;
+    }
+
+    nav ul {
+        padding: 0;
+    }
+  
+}
+
+/* Celular o que for tela  abaixo de 480px */
+@media (max-width: 480px) { 
+    
+    header .container {
+        padding: 0 40px;
+    }
+}
