@@ -92,7 +92,7 @@ nav img {
     height: 45px;
 }
 
-/* Melhora a resposividade retirando a margim do vav ul a, pois a margim
+/* Melhora a resposividade retirando a margim do nav ul a, pois a margim
 atrapalha querando muito facil */
 nav ul {
     width: 100%;
@@ -106,6 +106,10 @@ nav ul a {
     color: var(--green);
     text-decoration: none;
     /* margin: 0 35px; */
+}
+
+nav ul a svg {
+    display: none;
 }
 
 section {
@@ -157,4 +161,20 @@ section {
     header .container {
         padding: 0 40px;
     }
+
+    nav {
+        padding: 0 15px;
+    }
+
+    nav ul a {
+        font-size: 12px;
+    }
+
+    nav ul a svg {
+        display: block;
+        margin: 0 auto 10px;
+    }
+
+
+
 }
